@@ -1,0 +1,22 @@
+<div class="col-mb2">
+  <div class="card p-2" style="width:10 rem; height:30 rem">
+    <img
+          class="img-fluid"
+          src="{{ bandaDetail.image }}"
+          alt="{{ bandaDetail.name }}"
+        />
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight:bold">{{ bandaDetail.name }}</h5>
+        <div class="col">
+          <dl>
+            <dt class="bold" >Descripcion</dt>
+            <dd>{{bandaDetail.description}}</dd>
+            <hr />
+            <dt class="bold" >Popular Songs</dt>
+            <dd>{{bandaDetail.popularSongs}}</dd>
+            <hr />
+          </dl>
+        </div>
+      </div>
+  </div>
+ </div>

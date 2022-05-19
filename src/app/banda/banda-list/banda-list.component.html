@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr id="titulo">
+            <th class="h4">Id</th>
+            <th class="h4">Nombre</th>
+            <th class="h4">Numero de Miembros</th>
+          </tr>
+        </thead>
+        <tbody id="banda">
+          <tr *ngFor = "let b of bandas">
+            <td>
+              <dd>{{b.id}}</dd>
+            </td>
+            <td>
+              <dd (click)="onSelected(b)" style="color:blue">{{b.name}}</dd>
+            </td>
+            <td>
+              <dd>{{b.numberOfMembers}}</dd>
+            </td>
+          </tr>
+          <tr>
+            <td>Promedio Miembros: {{promedioMiembros}}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="col-4" *ngIf="selected">
+        <app-banda-detail [bandaDetail]="selectedBanda"></app-banda-detail>
+      </div>
+    </div>
+
+  </div>
+
